@@ -3,41 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You — HighIQ AI Agency</title>
+  <title>Payment Complete — HighIQ AI Agency</title>
   <meta name="robots" content="noindex">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #0a0e1a; color: #e2e8f0;
-      display: flex; align-items: center; justify-content: center;
       min-height: 100vh; padding: 2rem;
     }
+    .container { max-width: 550px; margin: 0 auto; }
     .card {
       background: #111827; border: 1px solid #1e293b;
-      border-radius: 12px; padding: 3rem 2rem;
-      max-width: 500px; text-align: center;
+      border-radius: 12px; padding: 2rem;
+      text-align: center; margin-bottom: 1.5rem;
     }
     .check { font-size: 3rem; margin-bottom: 1rem; }
-    h1 { font-size: 1.5rem; color: #f8fafc; margin-bottom: 1rem; }
-    p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
-    p strong { color: #60a5fa; }
-    .waiting {
-      margin-top: 1.5rem; padding: 1rem; border-radius: 8px;
-      background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2);
+    h1 { font-size: 1.4rem; color: #f8fafc; margin-bottom: 0.75rem; }
+    p { color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.75rem; }
+    .form-card {
+      background: #111827; border: 1px solid #1e293b;
+      border-radius: 12px; padding: 2rem;
     }
-    .waiting p { font-size: 0.85rem; }
+    .form-card h2 { font-size: 1.1rem; color: #f8fafc; margin-bottom: 1rem; }
+    .form-card input, .form-card textarea, .form-card select {
+      width: 100%; padding: 0.75rem 1rem; margin-bottom: 0.75rem;
+      background: #0f172a; border: 1px solid #1e293b; border-radius: 8px;
+      color: #e2e8f0; font-size: 0.9rem; font-family: inherit;
+    }
+    .form-card input:focus, .form-card textarea:focus { outline: none; border-color: #3b82f6; }
+    .form-card textarea { resize: vertical; min-height: 60px; }
+    .form-card .btn {
+      width: 100%; padding: 0.85rem; border: none; border-radius: 8px;
+      background: #3b82f6; color: white; font-size: 1rem; font-weight: 600;
+      cursor: pointer;
+    }
+    .form-card .btn:hover { background: #2563eb; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="check">✅</div>
-    <h1>Your Free Growth Kit Is on Its Way!</h1>
-    <p>We'll be sending your <strong>Website Audit + 5 Lead Sources + Automation Blueprint</strong> to your email inbox within the next hour.</p>
-    <div class="waiting">
-      <p>📬 In the meantime, check your email (and spam folder) for your first resource: <strong>"5 Lead Sources Every Cleaner Overlooks"</strong></p>
+  <div class="container">
+    <div class="card">
+      <div class="check">✅</div>
+      <h1>Payment Received — Thank You!</h1>
+      <p>Your $47 payment went through. Now tell us about your cleaning business so we can build your custom growth kit.</p>
     </div>
-    <p style="margin-top:1.5rem;font-size:0.8rem;color:#475569;">Got questions? Reply to our email — we read every one.</p>
+    <div class="form-card">
+      <h2>Tell Us About Your Business</h2>
+      <form action="https://formsubmit.co/highiqaiagency@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="💰 PAID — Cleaning Growth Kit Details">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://frantzenterprise.github.io/highiq-cleaning-funnel/confirmed.html">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" name="business" placeholder="Cleaning Business Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <select name="employees" required>
+          <option value="">How many employees?</option>
+          <option value="solo">Just me</option>
+          <option value="2-5">2-5</option>
+          <option value="6-15">6-15</option>
+          <option value="16+">16+</option>
+        </select>
+        <input type="text" name="city" placeholder="City / State" required>
+        <textarea name="challenge" placeholder="What's your biggest challenge right now?" rows="2"></textarea>
+        <button type="submit" class="btn">📩 Submit & Get My Growth Kit</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>
